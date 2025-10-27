@@ -84,8 +84,7 @@ export default function Header() {
               <li><a href="#3">{t.cash}</a></li>
               <li><a href="#4">{t.contacts}</a></li>
             </ul>
-
-            {/* <div className={styles.mobileExtras}>
+            <div className={styles.mobileExtras}>
               <span className={styles.contacts}>+996(223)810-104</span>
               <div className={styles.btns}>
                 <button
@@ -102,7 +101,7 @@ export default function Header() {
                   KR
                 </button>
               </div>
-            </div> */}
+            </div>
           </nav>
           <div className={styles.rightSide}>
             <span className={styles.contacts}>+996(223)810-104</span>

@@ -66,3 +66,12 @@
     gap: 30px;
   }
 }
+
+@media(max-width:480px){
+  .content{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: start;
+  }
+}

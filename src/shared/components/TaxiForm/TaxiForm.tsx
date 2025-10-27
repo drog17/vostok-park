@@ -82,7 +82,6 @@ export default function TaxiForm() {
               ? "*обязательные поля для заполнения"
               : "*толукталуучу милдеттүү талаалар"}
           </p>
-
           <form onSubmit={handleSubmit} className={styles.form}>
             <label className={styles.label}>
               {lang === "ru" ? "*ФИО" : "*АТЫ ЖӨНҮ"}
@@ -91,15 +90,13 @@ export default function TaxiForm() {
                 placeholder={
                   lang === "ru"
                     ? "Введите вашу фамилию, имя и отчество"
-                    : "Фамилияңызды, атыңызды киргизиңиз"
-                }
+                    : "Фамилияңызды, атыңызды киргизиңиз"}
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
                 className={styles.input}
               />
             </label>
-
             <div className={styles.row}>
               <label className={styles.label}>
                 {lang === "ru" ? "*Номер телефона" : "*Телефон номери"}
@@ -112,15 +109,13 @@ export default function TaxiForm() {
                   className={styles.input}
                 />
               </label>
-
               <label className={styles.label}>
                 {lang === "ru" ? "*Выберите направление" : "*Багытты тандаңыз"}
                 <select
                   value={form.direction}
                   onChange={(e) => setForm({ ...form, direction: e.target.value })}
                   required
-                  className={styles.select}
-                >
+                  className={styles.select}>
                   <option value="">
                     {lang === "ru" ? "Такси или доставка" : "Такси же жеткирүү"}
                   </option>
@@ -131,13 +126,11 @@ export default function TaxiForm() {
                 </select>
               </label>
             </div>
-
             <label className={styles.checkbox}>
               <input
                 type="checkbox"
                 checked={form.agree}
-                onChange={(e) => setForm({ ...form, agree: e.target.checked })}
-              />
+                onChange={(e) => setForm({ ...form, agree: e.target.checked })}/>
               <span>
                 {lang === "ru" ? "Я соглашаюсь с" : "Пайдалануу шарттарына"}{" "}
                 <a href="#" className={styles.link}>
@@ -147,7 +140,6 @@ export default function TaxiForm() {
                 </a>
               </span>
             </label>
-
             <button type="submit" className={styles.button} disabled={loading}>
               {loading
                 ? "Отправка..."
@@ -155,7 +147,6 @@ export default function TaxiForm() {
                 ? "Отправить заявку"
                 : "Өтүнмөнү жиберүү"}
             </button>
-
             {status && <p className={styles.status}>{status}</p>}
             {requestId && (
               <p className={styles.idText}>
