@@ -94,8 +94,7 @@ export default function TaxiForm() {
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
-                className={styles.input}
-              />
+                className={styles.input}/>
             </label>
             <div className={styles.row}>
               <label className={styles.label}>

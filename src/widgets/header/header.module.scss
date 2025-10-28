@@ -170,7 +170,9 @@
 }
 
 @media (max-width: 480px) {
-
+  .header{
+    margin-bottom: 10px;
+  }
   .burger {
     display: flex;
   }

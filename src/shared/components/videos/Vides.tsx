@@ -48,6 +48,7 @@ const UsefulVideos: React.FC = () => {
           bulletClass: styles.bullet,
           bulletActiveClass: styles.bulletActive,
         }}
+        breakpoints={{0:{slidesPerView:1}}}
         className={styles.swiper}
       >
         {videos.map((video, index) => (
@@ -60,8 +61,7 @@ const UsefulVideos: React.FC = () => {
                 src={video.src}
                 poster={video.thumbnail}
                 className={styles.video}
-                preload="metadata"
-              />
+                preload="metadata"/>
               <div className={styles.overlay}>
                 <div className={styles.playButton}>
                   <svg

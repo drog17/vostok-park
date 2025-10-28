@@ -60,6 +60,10 @@ export default function Cash() {
           bulletClass: styles.bullet,
           bulletActiveClass: styles.bulletActive,
         }}
+        breakpoints={{
+          0:{ slidesPerView: 1 },
+          834:{slidesPerView:3}
+        }}
         className={styles.swiper}
       >
         {videos.map((video, index) => (
@@ -72,8 +76,7 @@ export default function Cash() {
                 src={video.src}
                 poster={video.thumbnail}
                 className={styles.video}
-                preload="metadata"
-              />
+                preload="metadata"/>
               <div className={styles.overlay}>
                 <div className={styles.playButton}>
                   <svg
